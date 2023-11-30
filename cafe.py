@@ -1,8 +1,7 @@
 import getpass
 import random
 
-user = {"tanghuru":"qorhvk", "python":"happy"}
-user_menu = [[0,0,0,0], [0,0,0,0]]
+user = [["tanghuru", "hungry", [0,0,0,0]], ["python","happy", [0,0,0,0]]]
 
 check = 0
 while check == 0:
@@ -10,11 +9,11 @@ while check == 0:
     id = input("id : ")
     pw = getpass.getpass("pw : ")
     
-    if (id in user) and (pw == user[id]):
-        check = 1
-        print("로그인 성공")
-    else:
-        check = 0
+    for i in user:
+        if id == i[0] and pw == i[1]:
+            check = 1
+            print("로그인 성공")
+    if check == 0:
         print("id / password를 확인해 주세요")
 
 print("1. 메뉴판 보기")
