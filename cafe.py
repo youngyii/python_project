@@ -1,4 +1,21 @@
+import getpass
 import random
+
+user = {"tanghuru":"qorhvk", "python":"happy"}
+user_menu = [[0,0,0,0], [0,0,0,0]]
+
+check = 0
+while check == 0:
+    print("════════ LOG IN ════════")
+    id = input("id : ")
+    pw = getpass.getpass("pw : ")
+    
+    if (id in user) and (pw == user[id]):
+        check = 1
+        print("로그인 성공")
+    else:
+        check = 0
+        print("id / password를 확인해 주세요")
 
 print("1. 메뉴판 보기")
 print("2. 메뉴 추천")
