@@ -41,7 +41,15 @@ def Ordering(menu, user, now_user, filename):
     pp = GetPoint()
     user[now_user][3] += pp
     print(f"{pp}포인트 획득!")
-    print(f"보유 포인트: {user[now_user][3]}p\n")
+    print(f"보유 포인트:",end="")
+    
+    if(user[now_user][3] < 1000):
+        print("\U0001F331", end="")
+    elif(user[now_user][3]<2000):
+        print("\U0001F33F",end="")
+    else:
+        print("\U0001F333",end="")
+    print(f"{user[now_user][3]}p\n")
     
     pointOption = input("결제시 포인트를 사용하시겠습니까? (O/X): ")
     if pointOption == "O" or pointOption == "o":
