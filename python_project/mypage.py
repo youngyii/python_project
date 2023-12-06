@@ -10,12 +10,12 @@ def PwChange(users,n):
             check_newpw = getpass.getpass("새로운 비밀번호 재확인: ")
 
             if new_pw == check_newpw:
-                print("변경 성공!")
+                print("변경 성공!\n")
                 return new_pw
             else:
-                print("비밀번호가 맞지 않습니다. 다시 시도해 주세요.")
+                print("비밀번호가 맞지 않습니다. 다시 시도해 주세요.\n")
         else:
-            print("비밀번호가 틀렸습니다. 다시 시도해 주세요.")
+            print("비밀번호가 틀렸습니다. 다시 시도해 주세요.\n")
             
 
 def LogOut(users,n):
@@ -24,4 +24,3 @@ def LogOut(users,n):
     now= Login(users)
     
     return now
-

@@ -2,7 +2,7 @@ import random
 
 def show_menu(menu):
     cnt = 1
-    print("════════ MENU ════════")
+    print("\n════════ MENU ════════")
     for i in range(20):
         if i == 0:
             print("\n[Coffee]")
@@ -14,6 +14,7 @@ def show_menu(menu):
             print("\n[Tea]")
         print(f"{cnt}. {menu[i][0]} {menu[i][1]}원")
         cnt += 1
+    print()
 
 def recommend_menu(user,now_user,menu):
     print("\n════════ 추천 메뉴 ════════")

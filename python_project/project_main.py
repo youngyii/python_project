@@ -16,14 +16,12 @@ menu = [["아메리카노", 2500], ["카페라떼", 3000], ["카푸치노", 3000
 now_user = Login(user)
 pg = 1
     
-while(pg == 1): 
+while pg == 1: 
     if now_user == 0:
-      filename = "tanghuru.txt"
+        filename = "tanghuru.txt"
     elif now_user == 1:
-     filename = "python.txt" 
+        filename = "python.txt" 
     
-    #로그인 중인 사용자 표시
-    print(f"{user[now_user][0]}님 반가워요!")
     #번호 선택
     print("1. 메뉴판 보기")
     print("2. 메뉴 추천")
@@ -31,7 +29,7 @@ while(pg == 1):
     print("4. 주문 내역 보기")
     print("5. 마이페이지\n")
 
-    n = int(input("원하는 버튼(숫자)을 입력해주세요: "))
+    n = int(input("원하는 버튼(숫자)을 입력하세요: "))
 
     #번호 선택에 따른 모듈
     if n == 1:
@@ -43,13 +41,15 @@ while(pg == 1):
     elif n == 4:
         History(filename)
     elif n == 5:
-        choice = input("1. 비밀번호 변경\n2. 로그아웃\n3. 앱 종료 ")
+        print("\n════════ 마이페이지 ════════\n")
+        print("1. 비밀번호 변경\n2. 로그아웃\n3. 앱 종료\n")
+        choice = input("숫자를 입력하세요: ")
         if choice == "1":
             user[now_user][1] = PwChange(user, now_user)
         elif choice == "2":
             now_user = LogOut(user,now_user)
         elif choice == "3":
-            print("앱을 종료합니다")
+            print("앱을 종료합니다.")
             pg = 2      
         else:
             print("잘못된 입력입니다.")

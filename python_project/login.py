@@ -12,15 +12,9 @@ def Login(user):
                 check = 1
                 now_user = i
                 print("로그인 성공\n")
+                
+                #로그인 중인 사용자 표시
+                print(f"{user[now_user][0]}님 반가워요!")
         if check == 0:
             print("id / password를 확인해 주세요")
     return now_user
-
-
-        
-    
-        
-
-    
-
-
